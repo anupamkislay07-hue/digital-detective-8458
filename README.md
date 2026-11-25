@@ -48,6 +48,14 @@ digital-detective-8458/
 └── evidence/
 ```
 
+## My Learning
+
+Three things this assignment taught me:
+
+1. **The computer is layers, not magic.** Input → processing → output → storage, an operating system scheduling processes and enforcing permissions, and a network stack turning a domain name into packets and back. Seeing each layer with my own commands made the machine predictable.
+2. **The Terminal is a shortcut, not a difficulty.** Once `pwd`, `ls`, `cp` and `mv` were familiar, flags and pipes let me combine small commands into a single useful result instead of clicking through folders.
+3. **Version control is the record of the work, not an extra step.** Committing each mission separately means the history itself shows what I did, and a branch plus Pull Request lets a change be reviewed before it reaches `main`.
+
 ---
 
 **Name:** Anupam Kislay  
