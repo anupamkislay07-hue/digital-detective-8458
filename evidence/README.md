@@ -1,6 +1,6 @@
 # Evidence — screenshots
 
-The screenshots below are copies of the supplied images. I redacted computer account names, device names, home-directory details and the serial number before adding them here. The original images remain unchanged outside this repository.
+The screenshots below are copies of the images supplied for this repository. They are unredacted, as requested.
 
 Evidence is arranged in one folder per mission, from `mission-00-setup/` through `mission-08-final-report/`, with short descriptive PNG filenames.
 
@@ -28,4 +28,4 @@ Evidence is arranged in one folder per mission, from `mission-00-setup/` through
 - Mission 07: include the `curl` response headers in the network capture.
 - Mission 08: capture the final clean Git status after committing and pushing the evidence.
 
-Before publishing any new screenshot, hide computer account names, hostnames, serial numbers, home paths, local IP addresses and Wi-Fi names. Public example-domain addresses are fine.
+The screenshots show the original terminal prompts and computer information. They have not been altered.
