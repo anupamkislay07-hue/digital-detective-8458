@@ -103,7 +103,7 @@ A **local repository** lives inside my project folder on the computer: it is fas
 
 Git is the record; GitHub is where that record is hosted and reviewed. Every commit is a snapshot of the staged changes only, which is why `git add` matters: it decides what goes into the snapshot. Staging and committing are therefore two separate decisions — *what* to save, then *saving* it — and keeping them separate is what makes clean, per-mission commits possible instead of one large unexplained change.
 
-Branches let me work without touching `main`, and a Pull Request is the review step that turns a branch into a proposed change. The `update-about` work showed the whole cycle: branch, edit, stage, commit, push, compare, review. Leaving PR #1 open rather than merging immediately also made clear that a branch can sit published and reviewable while `main` stays stable.
+Branches let me work without touching `main`, and a Pull Request is the review step that turns a branch into a proposed change. The `update-about` work showed the whole cycle: branch, edit, stage, commit, push, compare, review and merge. PR #1 was merged into `main`; the open-PR screenshot currently in `evidence/` shows a different request with the branches reversed, so it is not evidence of that merge.
 
 ## 5. Difficulties faced
 

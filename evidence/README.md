@@ -1,38 +1,29 @@
 # Evidence — screenshots
 
-This folder holds privacy-safe screenshots of the commands and output described in
-each mission README. Every mission README already quotes the same output as text, so
-these screenshots are supporting proof, not the only evidence.
+The screenshots below are copies of the supplied images. I redacted computer account names, device names, home-directory details and the serial number before adding them here. The original images remain unchanged outside this repository.
 
-Screenshots are grouped by mission. Each cell in the table names the exact file to save
-in that folder.
+## Added screenshots
 
-## What to capture
-
-| Mission | File to save | What the screenshot must show |
+| Mission | File | What it shows / limitation |
 |---|---|---|
-| 02 — Terminal | `mission-02-terminal/01-terminal-basics.png` | The terminal with `pwd`, `ls -lah`, `whoami`-free flag comparison (`ls -l` vs `ls -lah`) |
-| 02 — Terminal | `mission-02-terminal/02-file-operations.png` | `cp`, `mv`, `cat` of `terminal-practice/notes.txt`, and the appended second line plus `notes-copy.txt` |
-| 03 — Operating system | `mission-03-operating-system/01-system-and-storage.png` | macOS version (`sw_vers`) and free disk space (`df -h`) |
-| 03 — Operating system | `mission-03-operating-system/02-processes.png` | `top -l 1` snapshot and `ps -ax -o pid,comm` rows with a few PIDs |
-| 03 — Operating system | `mission-03-operating-system/03-permissions.png` | `ls -l` output showing the `-rw-r--r--` permission string |
-| 04 — Programs | `mission-04-programs/01-hello-python.png` | `python3 hello.py` printing `Hello from Python` |
-| 05 — Numbers and data | `mission-05-numbers-data/01-converter.png` | `python3 number_converter.py` run with three different values |
-| 05 — Numbers and data | `mission-05-numbers-data/02-python-expressions.png` | Python `bin()`, `hex()`, `int(..., 2)`, `int(..., 16)` and `ord()` results |
-| 06 — Git and GitHub | `mission-06-git-github/01-git-history.png` | `git log --oneline --graph`, `git branch` and `git status` |
-| 06 — Git and GitHub | `mission-06-git-github/02-pull-request-merged.png` | The GitHub page of Pull Request #1 showing the **Merged** state |
-| 07 — Networking | `mission-07-networking/01-connectivity.png` | `ping`, `nslookup` and `curl` output for the public example domain |
+| 00 — Setup | `mission-00-setup/01-setup-and-repository-structure.png` | Repository folders, Git status and history. This is a snapshot from before the untracked practice files were committed. |
+| 01 — Computer basics | `mission-01-computer-basics/01-about-this-mac-redacted.png` | Mac model, chip, memory and storage details; serial number redacted. |
+| 02 — Terminal | `mission-02-terminal/01-file-management-redacted.png` | Directory listing and file operations. It includes a failed `ped` command followed by later commands. |
+| 03 — Operating system | `mission-03-operating-system/02-system-version-redacted.png` | `sw_vers` and `uname` output. It does not show storage, processes or permissions. |
+| 04 — Programs | `mission-04-programs/01-hello-python-redacted.png` | `hello.py` output and Python version. |
+| 05 — Numbers and data | `mission-05-numbers-data/01-converter-one-test.png` | Converter run with input `6`; it does not show the three test values recorded in the mission README. |
+| 06 — Git and GitHub | `mission-06-git-github/01-git-history-redacted.png` | Recent Git history. The separate pull-request image below is not proof of the merged PR. |
+| 06 — Git and GitHub | `mission-06-git-github/02-pull-request-open-reversed-direction.png` | An open pull request with the branches in the reverse direction from the merged PR described in Mission 06. Keep it only as a historical screenshot; capture the actual merged PR for submission evidence. |
+| 07 — Networking | `mission-07-networking/01-connectivity-dns-redacted.png` | `ping` and `nslookup` results for `example.com`; it does not include the `curl` output. |
+| 08 — Final report | `mission-08-final-report/01-pre-staging-status-redacted.png` | Git status, branch and recent history from before these evidence files were staged. It is not a clean final-status capture. |
 
-## Rules for every screenshot
+## Still needed for complete evidence
 
-- **No computer account name.** Hide the name that appears before `~` or `$` in the prompt.
-- **No device name.** Blur the host name shown next to the prompt or in `sw_vers`/`hostname` output.
-- **No IP address or Wi-Fi name.** Local addresses and network names must not be visible.
-- Network evidence uses a public example domain only, never a real site or a real address.
-- Keep the command and its output readable — a cropped, unreadable screenshot proves nothing.
+- Mission 02: a clean capture of the basic Terminal commands and file operations, with private prompt details hidden.
+- Mission 03: captures for disk space, processes and permissions.
+- Mission 05: captures showing the converter tested with at least three values and the Python conversion expressions.
+- Mission 06: a `git status` / branch capture and the GitHub page showing the correctly directed Pull Request as merged.
+- Mission 07: include the `curl` response headers in the network capture.
+- Mission 08: capture the final clean Git status after committing and pushing the evidence.
 
-## Status
-
-None of the screenshots above have been added yet. All eleven entries are outstanding;
-drop the image files into the matching folder with the names in the table and they will be
-committed with the rest of the repository.
+Before publishing any new screenshot, hide computer account names, hostnames, serial numbers, home paths, local IP addresses and Wi-Fi names. Public example-domain addresses are fine.
