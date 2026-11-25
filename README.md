@@ -20,7 +20,7 @@ Each mission lives in its own folder with its own `README.md` and is committed s
 | 03 | Operating System | Completed | [Mission 03](mission-03-operating-system/README.md) |
 | 04 | Programs | Completed | [Mission 04](mission-04-programs/README.md) |
 | 05 | Numbers & Data | Completed | [Mission 05](mission-05-numbers-data/README.md) |
-| 06 | Git & GitHub | Pending | [Mission 06](mission-06-git-github/README.md) |
+| 06 | Git & GitHub | Completed | [Mission 06](mission-06-git-github/README.md) |
 | 07 | Networking | Pending | [Mission 07](mission-07-networking/README.md) |
 | 08 | Final Report | Pending | [Mission 08](mission-08-final-report/README.md) |
 
