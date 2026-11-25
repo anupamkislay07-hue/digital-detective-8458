@@ -1,0 +1,2 @@
+Line one: practice file created with touch.
+Line two: added with >> without removing line one.
