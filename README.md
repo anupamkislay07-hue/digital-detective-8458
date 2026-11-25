@@ -56,6 +56,23 @@ Three things this assignment taught me:
 2. **The Terminal is a shortcut, not a difficulty.** Once `pwd`, `ls`, `cp` and `mv` were familiar, flags and pipes let me combine small commands into a single useful result instead of clicking through folders.
 3. **Version control is the record of the work, not an extra step.** Committing each mission separately means the history itself shows what I did, and a branch plus Pull Request lets a change be reviewed before it reaches `main`.
 
+## Running the Number Converter
+
+The number converter built in Mission 05 takes a decimal number and prints its binary and hexadecimal forms. Run it from its mission folder:
+
+```bash
+cd mission-05-numbers-data
+python3 number_converter.py
+```
+
+It then prompts for input, for example:
+
+```text
+Enter a decimal number: 255
+Decimal: 255
+Binary: 0b11111111
+Hexadecimal: 0xff
+```
 ---
 
 **Name:** Anupam Kislay  
