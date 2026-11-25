@@ -1,0 +1,36 @@
+# Network checks against the public example domain
+# Captured 2026-11-26 03:24
+
+$ ping -c 4 example.com
+PING example.com (104.20.23.154): 56 data bytes
+64 bytes from 104.20.23.154: icmp_seq=0 ttl=59 time=5.051 ms
+64 bytes from 104.20.23.154: icmp_seq=1 ttl=59 time=8.474 ms
+64 bytes from 104.20.23.154: icmp_seq=2 ttl=59 time=4.306 ms
+64 bytes from 104.20.23.154: icmp_seq=3 ttl=59 time=5.779 ms
+
+--- example.com ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 4.306/5.902/8.474/1.573 ms
+
+$ nslookup example.com
+
+Non-authoritative answer:
+Name:	example.com
+Address: 172.66.147.243
+Name:	example.com
+Address: 104.20.23.154
+
+
+$ curl -I https://example.com
+HTTP/2 200 
+date: Wed, 25 Nov 2026 21:54:13 GMT
+content-type: text/html; charset=utf-8
+server: cloudflare
+last-modified: Tue, 24 Nov 2026 21:00:21 GMT
+allow: GET, HEAD
+accept-ranges: bytes
+age: 4009
+cf-cache-status: HIT
+cf-ray: a603e404e9a01d50-BLR
+alt-svc: h3=":443"; ma=86400
+

@@ -1,0 +1,24 @@
+# Terminal session
+# Captured 2026-11-26 03:24 in an empty folder.
+
+$ pwd
+/Users/[redacted]/.config/freebuff-desktop/local-projects/063f94d3-85bb-4918-9edb-f746fd9ae6d3/repo/.evid-tmp
+
+$ mkdir terminal-practice
+$ touch original.txt
+$ cp original.txt copy.txt
+$ mv copy.txt renamed-copy.txt
+
+$ ls -l | awk '{print $1, $9}'
+-rw-r--r--@ original.txt
+-rw-r--r--@ renamed-copy.txt
+
+$ echo "This is my first line." > notes.txt
+$ echo "This is my second line." >> notes.txt
+
+$ cat notes.txt
+This is my first line.
+This is my second line.
+
+$ stat -f '%Sp %N' notes.txt
+-rw-r--r-- notes.txt

@@ -1,0 +1,7 @@
+# Running hello.py
+# Captured 2026-11-26 03:24
+
+$ python3 mission-04-programs/hello.py
+Hello from Python
+Running Python: 3.9.6
+Current time: 2026-11-26 03:24:10

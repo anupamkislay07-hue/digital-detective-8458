@@ -1,0 +1,38 @@
+# Git history and working state
+# Captured 2026-11-26 03:24
+
+$ git log --oneline --graph -12
+* a029254 Add evidence folder structure and correct submission status
+* 792fce2 Record merged Pull Request and conflict resolution in final report
+* 11b21a1 Update Mission 06 PR status after merge
+*   2d76846 Merge pull request #1 from [redacted]07-hue/update-about
+|\  
+| *   e710e25 Merge main into update-about and keep both README sections
+| |\  
+| |/  
+|/|   
+* | d1b9aff Document how to run the number converter in root README
+* | e87e3c7 Complete final report and verify assignment submission
+* | 9312327 Explain networking concepts and website communication
+* | c64f0a1 Complete Git and GitHub collaboration mission
+| * 6662b9f Add My Learning section to root README
+|/  
+* 39ad3db Build number converter and practise data representation
+* 29f06f7 Compare compilers and interpreters
+
+$ git branch -a
+* main
+  update-about
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+  remotes/origin/update-about
+
+$ git status --short --branch
+## main...origin/main
+?? evidence/mission-00-setup/
+?? evidence/mission-02-terminal/terminal-session.txt
+?? evidence/mission-03-operating-system/system-evidence.txt
+?? evidence/mission-04-programs/hello-output.txt
+?? evidence/mission-05-numbers-data/converter-runs.txt
+?? evidence/mission-06-git-github/git-history.txt
+?? evidence/mission-07-networking/connectivity.txt

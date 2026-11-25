@@ -1,0 +1,9 @@
+# Tool versions
+# Captured 2026-11-26 03:24
+
+$ python3 --version
+Python 3.9.6
+$ git --version
+git version 2.54.0 (Apple Git-157)
+$ brew --version
+Homebrew 7.0.16
