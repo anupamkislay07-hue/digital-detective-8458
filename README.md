@@ -15,7 +15,7 @@ Each mission lives in its own folder with its own `README.md` and is committed s
 | Mission | Topic | Status | Documentation |
 |---|---|---|---|
 | 00 | Setup | Completed | [Mission 00](mission-00-setup/README.md) |
-| 01 | Computer Basics | Pending | [Mission 01](mission-01-computer-basics/README.md) |
+| 01 | Computer Basics | Completed | [Mission 01](mission-01-computer-basics/README.md) |
 | 02 | Terminal | Pending | [Mission 02](mission-02-terminal/README.md) |
 | 03 | Operating System | Pending | [Mission 03](mission-03-operating-system/README.md) |
 | 04 | Programs | Pending | [Mission 04](mission-04-programs/README.md) |
