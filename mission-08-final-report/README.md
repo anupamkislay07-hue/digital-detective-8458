@@ -73,4 +73,4 @@ The privacy rule is part of the work, not an afterthought: Terminal output conta
 
 Commit message: **Complete final report and verify assignment submission**
 
-Each correction was committed separately with a mission-specific message, pushed to GitHub, and verified on the repository page. The repository URL has been submitted through the form shared by the instructor.
+Each correction was committed separately with a mission-specific message, pushed to GitHub, and verified on the repository page. The repository URL is ready to submit: the repository is public, every commit is pushed, and the link only needs to be entered in the form shared by the instructor.
