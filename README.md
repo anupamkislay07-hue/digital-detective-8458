@@ -48,6 +48,24 @@ digital-detective-8458/
 └── evidence/
 ```
 
+## Running the Number Converter
+
+The number converter built in Mission 05 takes a decimal number and prints its binary and hexadecimal forms. Run it from its mission folder:
+
+```bash
+cd mission-05-numbers-data
+python3 number_converter.py
+```
+
+It then prompts for input, for example:
+
+```text
+Enter a decimal number: 255
+Decimal: 255
+Binary: 0b11111111
+Hexadecimal: 0xff
+```
+
 ---
 
 **Name:** Anupam Kislay  
