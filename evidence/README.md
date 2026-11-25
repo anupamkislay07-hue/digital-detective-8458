@@ -1,34 +1,38 @@
-# Evidence
+# Evidence — screenshots
 
-Supporting output for the nine missions. Every mission README already quotes its commands and
-results in text; this folder keeps a captured copy so the evidence can be opened directly.
+This folder holds privacy-safe screenshots of the commands and output described in
+each mission README. Every mission README already quotes the same output as text, so
+these screenshots are supporting proof, not the only evidence.
 
-The assignment allows "selected output" as evidence, so each file here is real terminal output
-recorded on the computer, with personal details such as the account name and home-directory path
-replaced by `[redacted]`.
+Screenshots are grouped by mission. Each cell in the table names the exact file to save
+in that folder.
 
-## Captured output
+## What to capture
 
-| File | Mission | What it shows |
+| Mission | File to save | What the screenshot must show |
 |---|---|---|
-| `mission-00-setup/tool-versions.txt` | 00 | `python3 --version`, `git --version`, `brew --version` |
-| `mission-02-terminal/terminal-session.txt` | 02 | `pwd`, `mkdir`, `touch`, `cp`, `mv`, `ls -l`, `echo >` vs `echo >>`, `cat`, `stat` permission string |
-| `mission-03-operating-system/system-evidence.txt` | 03 | `sw_vers`, `uname -m`, `df -h /`, `ps -ax -o pid,comm`, `stat -f '%Sp %N'` |
-| `mission-04-programs/hello-output.txt` | 04 | `python3 hello.py` printing `Hello from Python` |
-| `mission-05-numbers-data/converter-runs.txt` | 05 | `number_converter.py` run with 23, 255 and 7, plus `bin()`, `int()`, `hex()`, `ord()` results |
-| `mission-06-git-github/git-history.txt` | 06 | `git log --oneline --graph`, `git branch -a`, `git status --short --branch` |
-| `mission-07-networking/connectivity.txt` | 07 | `ping`, `nslookup` and `curl -I` for the public example domain |
+| 02 — Terminal | `mission-02-terminal/01-terminal-basics.png` | The terminal with `pwd`, `ls -lah`, `whoami`-free flag comparison (`ls -l` vs `ls -lah`) |
+| 02 — Terminal | `mission-02-terminal/02-file-operations.png` | `cp`, `mv`, `cat` of `terminal-practice/notes.txt`, and the appended second line plus `notes-copy.txt` |
+| 03 — Operating system | `mission-03-operating-system/01-system-and-storage.png` | macOS version (`sw_vers`) and free disk space (`df -h`) |
+| 03 — Operating system | `mission-03-operating-system/02-processes.png` | `top -l 1` snapshot and `ps -ax -o pid,comm` rows with a few PIDs |
+| 03 — Operating system | `mission-03-operating-system/03-permissions.png` | `ls -l` output showing the `-rw-r--r--` permission string |
+| 04 — Programs | `mission-04-programs/01-hello-python.png` | `python3 hello.py` printing `Hello from Python` |
+| 05 — Numbers and data | `mission-05-numbers-data/01-converter.png` | `python3 number_converter.py` run with three different values |
+| 05 — Numbers and data | `mission-05-numbers-data/02-python-expressions.png` | Python `bin()`, `hex()`, `int(..., 2)`, `int(..., 16)` and `ord()` results |
+| 06 — Git and GitHub | `mission-06-git-github/01-git-history.png` | `git log --oneline --graph`, `git branch` and `git status` |
+| 06 — Git and GitHub | `mission-06-git-github/02-pull-request-merged.png` | The GitHub page of Pull Request #1 showing the **Merged** state |
+| 07 — Networking | `mission-07-networking/01-connectivity.png` | `ping`, `nslookup` and `curl` output for the public example domain |
 
-## Screenshots
+## Rules for every screenshot
 
-Screenshots are optional for this folder. The versions captured on the computer showed the account
-name and device name in the prompt, which the assignment forbids, so the text output above is used
-instead. If privacy-safe screenshots are taken later, save them in the matching mission folder
-(e.g. `mission-02-terminal/`) using names such as `01-terminal-basics.png`, and add them to this
-table.
+- **No computer account name.** Hide the name that appears before `~` or `$` in the prompt.
+- **No device name.** Blur the host name shown next to the prompt or in `sw_vers`/`hostname` output.
+- **No IP address or Wi-Fi name.** Local addresses and network names must not be visible.
+- Network evidence uses a public example domain only, never a real site or a real address.
+- Keep the command and its output readable — a cropped, unreadable screenshot proves nothing.
 
-## Rules that were applied
+## Status
 
-- No computer account name, device name, or personal IP address anywhere in these files.
-- Network checks use only the public example domain, never a real site or a real local address.
-- Output is copied as it was produced, not rewritten; only identifying paths are replaced with `[redacted]`.
+None of the screenshots above have been added yet. All eleven entries are outstanding;
+drop the image files into the matching folder with the names in the table and they will be
+committed with the rest of the repository.
