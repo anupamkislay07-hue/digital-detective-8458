@@ -1,20 +1,14 @@
-# Mission 5: Numbers and Data
+# Mission 05 — Numbers, data and text encoding
 
-## Objective
+## 1. Task / objective
 
-To understand different number systems, convert values between decimal, binary, and hexadecimal, verify conversions using Python, build a number converter, and learn how computers store text using character encoding.
+Convert values between decimal, binary and hexadecimal by hand showing the working, verify each conversion with Python, build a small working converter program, and explain how computers store text with ASCII and UTF-8.
 
----
+## 2. Work completed
 
-## Task 5.1: Convert Numbers by Hand
+### Task 5.1 — Conversions by hand
 
-I practised converting numbers between decimal, binary, and hexadecimal systems.
-
-### Manual Conversions
-
-**1. Decimal 13 to Binary**
-
-Repeated division by 2:
+**1. Decimal 13 → binary** (repeated division by 2)
 
 | Division | Quotient | Remainder |
 |---|---:|---:|
@@ -23,11 +17,9 @@ Repeated division by 2:
 | 3 ÷ 2 | 1 | 1 |
 | 1 ÷ 2 | 0 | 1 |
 
-Reading the remainders from bottom to top:
+Reading remainders bottom to top: `13 = 1101₂`
 
-`13 (decimal) = 1101 (binary)`
-
-**2. Decimal 25 to Binary**
+**2. Decimal 25 → binary**
 
 | Division | Quotient | Remainder |
 |---|---:|---:|
@@ -37,100 +29,43 @@ Reading the remainders from bottom to top:
 | 3 ÷ 2 | 1 | 1 |
 | 1 ÷ 2 | 0 | 1 |
 
-`25 (decimal) = 11001 (binary)`
+`25 = 11001₂`
 
-**3. Binary 1010 to Decimal**
+**3. Binary 1010 → decimal**
 
-= 1 × 2³ + 0 × 2² + 1 × 2¹ + 0 × 2⁰
+= 1 × 2³ + 0 × 2² + 1 × 2¹ + 0 × 2⁰ = 8 + 0 + 2 + 0 = **10**
 
-= 8 + 0 + 2 + 0
+**4. Binary 1101 → decimal**
 
-= **10**
+= 1 × 2³ + 1 × 2² + 0 × 2¹ + 1 × 2⁰ = 8 + 4 + 0 + 1 = **13**
 
-**4. Binary 1101 to Decimal**
+**5. Hexadecimal A → decimal**
 
-= 1 × 2³ + 1 × 2² + 0 × 2¹ + 1 × 2⁰
+A = 10, and this is a single digit in the 16⁰ place, so **A = 10**
 
-= 8 + 4 + 0 + 1
+**6. Hexadecimal 1F → decimal**
 
-= **13**
+= 1 × 16¹ + 15 × 16⁰ = 16 + 15 = **31**
 
-**5. Hexadecimal A to Decimal**
+**7. Binary 1111 → hexadecimal**
 
-A = 10
+1111₂ = 8 + 4 + 2 + 1 = 15, and 15 in hexadecimal is F, so **1111₂ = F₁₆**
 
-Therefore, A (hexadecimal) = **10 (decimal)**
+### Task 5.2 — Verification with Python
 
-**6. Hexadecimal 1F to Decimal**
+| Expression | Result | Matches manual work? |
+|---|---|---|
+| `bin(13)` | `0b1101` | Yes |
+| `bin(25)` | `0b11001` | Yes |
+| `int("1010", 2)` | `10` | Yes |
+| `int("1101", 2)` | `13` | Yes |
+| `int("A", 16)` | `10` | Yes |
+| `int("1F", 16)` | `31` | Yes |
+| `hex(15)` | `0xf` | Yes |
 
-F = 15
+### Task 5.3 — The number converter
 
-= 1 × 16¹ + 15 × 16⁰
-
-= 16 + 15
-
-= **31**
-
-**7. Binary 1111 to Hexadecimal**
-
-1111 (binary) = 8 + 4 + 2 + 1 = 15
-
-15 in hexadecimal is F.
-
-Therefore, `1111 (binary) = F (hexadecimal)`.
-
-### Summary of Conversions
-
-| Conversion | Result |
-|---|---|
-| Decimal 13 → Binary | 1101 |
-| Decimal 25 → Binary | 11001 |
-| Binary 1010 → Decimal | 10 |
-| Binary 1101 → Decimal | 13 |
-| Hexadecimal A → Decimal | 10 |
-| Hexadecimal 1F → Decimal | 31 |
-| Binary 1111 → Hexadecimal | F |
-
----
-
-## Task 5.2: Verify Using Python
-
-I used Python's built-in functions to verify the manual conversions.
-
-### Functions Used
-
-- `bin()` converts an integer into binary.
-- `hex()` converts an integer into hexadecimal.
-- `int()` converts a number represented as a string into an integer using the specified base.
-
-### Python Expressions and Results
-
-| Expression | Result |
-|---|---|
-| `bin(13)` | `0b1101` |
-| `bin(25)` | `0b11001` |
-| `int("1010", 2)` | `10` |
-| `int("1101", 2)` | `13` |
-| `int("A", 16)` | `10` |
-| `int("1F", 16)` | `31` |
-| `hex(15)` | `0xf` |
-
-All the results match the corresponding manual conversions.
-
-### What I Learned
-
-- Python provides built-in functions for number conversion.
-- The prefix `0b` represents binary.
-- The prefix `0x` represents hexadecimal.
-- The second argument of `int()` specifies the base of the input number.
-
----
-
-## Task 5.3: Build a Small Number Converter
-
-I created a Python program named `number_converter.py` that accepts a decimal number and displays its binary and hexadecimal representations.
-
-### Program Code
+`number_converter.py` in this folder:
 
 ```python
 # Decimal to Binary and Hexadecimal Converter
@@ -145,97 +80,62 @@ print("Binary:", binary)
 print("Hexadecimal:", hexadecimal)
 ```
 
-### Sample Test Cases
+Run from this folder with `python3 number_converter.py`. Test results:
 
-**Test 1: Input = 13**
+| Test input | Binary output | Hexadecimal output |
+|---|---|---|
+| `13` | `0b1101` | `0xd` |
+| `25` | `0b11001` | `0x19` |
+| `31` | `0b11111` | `0x1f` |
 
-```text
-Enter a decimal number: 13
-Decimal: 13
-Binary: 0b1101
-Hexadecimal: 0xd
-```
+All three match the hand calculations in Task 5.1.
 
-**Test 2: Input = 25**
+### Task 5.4 — How text is stored
 
-```text
-Enter a decimal number: 25
-Decimal: 25
-Binary: 0b11001
-Hexadecimal: 0x19
-```
+- **ASCII decimal codes:** uppercase `A` = **65**, lowercase `a` = **97**.
+- **Why an encoding standard is needed:** a computer can only store numbers, so an encoding defines which number represents which character. Without an agreed standard, the same bytes would be shown as different characters on different machines and text could not be exchanged reliably.
+- **Characters outside basic ASCII:** `₹` (Indian rupee sign), `अ` (Devanagari letter) and `😊` (emoji) are all outside the 128 basic ASCII characters and are represented using Unicode encodings such as UTF-8.
 
-**Test 3: Input = 31**
+## 3. Commands / tools used
 
-```text
-Enter a decimal number: 31
-Decimal: 31
-Binary: 0b11111
-Hexadecimal: 0x1f
-```
+| Command / tool / function | Purpose |
+|---|---|
+| `python3` (interactive shell) | Test conversion expressions one at a time. |
+| `bin(n)` | Convert an integer to a binary string with the `0b` prefix. |
+| `hex(n)` | Convert an integer to a hexadecimal string with the `0x` prefix. |
+| `int(string, base)` | Interpret a string as a number in a given base (2 for binary, 16 for hex). |
+| `input()` | Read the number typed by the user as text. |
+| `int()` | Convert that text into an integer. |
+| `print()` | Display the decimal, binary and hexadecimal results. |
+| `ord()` | Checked character codes while verifying ASCII values. |
 
-### What I Learned
+## 4. My understanding
 
-- How to take integer input using `input()` and `int()`.
-- How to use `bin()` and `hex()` for number conversion.
-- How to display converted values using `print()`.
-- How to create and execute a simple Python program.
+Positional number systems all work the same way: each position is worth the base raised to a power, and hexadecimal is simply base 16 where the digits after 9 are A–F. That is why decimal 25 becomes `11001₂` (16 + 8 + 1) and hexadecimal `1F` becomes 31 (16 + 15).
 
----
+Converting to binary by repeated division collects remainders in reverse order; converting back multiplies each bit by its power of two. `bin()` and `hex()` do that work and mark the base with `0b` and `0x`, while `int(text, base)` goes the other way. The converter program is just those three steps plus input and output.
 
-## Task 5.4: How Is Text Stored?
+Text is numbers too. ASCII covers 128 characters where `A` is 65 and `a` is 97, so case is a difference of 32. That small set cannot hold other alphabets or emoji, which is why Unicode and UTF-8 exist: a wider set of characters, stored with a variable number of bytes so plain English stays compact.
 
-Computers store text using numerical representations of characters. Character encoding standards help computers represent and interpret text consistently.
+## 5. Difficulties faced
 
-### 1. ASCII Codes
+- Understanding the different bases and writing the division tables in the correct order.
+- Converting binary to hexadecimal at first, until I realised four binary bits map to exactly one hex digit.
+- Mixing up the `0b`/`0x` prefixes that Python prints with the actual digits, when comparing results to my manual answers.
 
-ASCII stands for American Standard Code for Information Interchange.
+## 6. How I resolved them
 
-It assigns numerical values to letters, digits, and symbols.
+- I used repeated division for decimal → binary and always read the remainders from the bottom upward, which made `13` and `25` come out correct.
+- I grouped `1111` into one group of four bits, saw it equals 15, and wrote `F` — the four-bits-per-hex-digit rule made every later conversion quick.
+- I compared only the digits after the prefix, so `0b1101` was checked against my `1101` working rather than treated as an error.
 
-- Uppercase A = 65
-- Lowercase a = 97
+## 7. Evidence / files
 
-### 2. Why Are Encoding Standards Needed?
+- `number_converter.py` — the working converter used for the tests above.
+- This README with the manual working, Python verification table and test results.
 
-Computers store information in binary form. Encoding standards assign numerical representations to characters so that computers can store, interpret, and exchange text consistently.
+## 8. Commit details
 
-### 3. Character Outside Basic ASCII
+Commit message: **Build number converter and practise data representation**
 
-Examples include:
-
-- ₹ (Indian Rupee symbol)
-- अ (Devanagari character)
-- 😊 (Emoji)
-
-These characters are supported by Unicode and can be represented using UTF-8 encoding.
-
-### What I Learned
-
-I understood that text is also stored as numerical data. ASCII represents a basic set of characters, while Unicode supports characters from many languages and additional symbols. UTF-8 is a widely used Unicode encoding format.
-
----
-
-## Overall Learning
-
-Through this mission, I learned about decimal, binary, and hexadecimal number systems and how to convert values between them.
-
-I practised manual conversions and verified the results using Python's built-in functions. I also created a small number converter program and learned how computers represent text using ASCII and Unicode encoding.
-
-## Difficulties Faced
-
-- Understanding the different number systems and their bases.
-- Converting binary and hexadecimal values manually.
-- Understanding how Python's built-in conversion functions work.
-- Understanding how characters are represented as numerical values.
-
-## Tools Used
-
-- Python 3
-- Visual Studio Code
-- macOS Terminal
-- Git and GitHub
-
-## Conclusion
-
-This mission helped me understand how computers represent numbers and text internally. I gained practical experience with number conversions, Python programming, and character encoding.
+Pushed to GitHub on the `main` branch and verified that `number_converter.py` and this README are visible in the repository.
