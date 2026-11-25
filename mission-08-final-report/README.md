@@ -10,7 +10,8 @@ Reviewed every mission folder, its README and its commit history, then made thes
 
 - **Mission 02:** added the `terminal-practice/` folder required by Task 2.2 with its two-line file and renamed copy, and answered all four reflection questions (replacing vs. appending, copying vs. moving, what `pwd` provides, why listing is useful).
 - **Mission 03:** added the missing system activity snapshot, a real process list showing PIDs, absolute/relative path examples taken from the assignment folder itself, a permission listing with the owner's `rwx` letters, and the missing "User interface / shell" row.
-- **Mission 06:** documented the `update-about` branch and the Pull Request workflow with its commands and status.
+- **Mission 06:** documented the `update-about` branch and the Pull Request workflow with its commands and status, then completed it: PR #1 was merged into `main` as commit `2d76846`, and the local `main` was updated with `git checkout main && git pull` so the "My Learning" section is present in the root README.
+- **Merge conflict:** GitHub reported a conflict between PR #1 and `main`, because the root README had gained a "Running the Number Converter" section on `main` while the branch added "My Learning" at the same place. Resolved it locally by merging `main` into `update-about` and keeping both sections (commit `e710e25`), pushed the branch, and merged the PR — so neither section was lost.
 - **Mission 07:** replaced the concept table with all eight required concepts (LAN, MAN, WAN, DNS, router, protocol, packet switching, client–server), added real `ping`/`nslookup`/`curl` observations and the seven-step website walkthrough.
 - **Mission 04:** `hello.py` now prints the exact required message, "Hello from Python".
 - **All missions:** rewrote each README to the eight required headings — task/objective, work completed, commands/tools used, my understanding, difficulties faced, how I resolved them, evidence/files, commit details.
@@ -59,7 +60,7 @@ The privacy rule is part of the work, not an afterthought: Terminal output conta
 ## 6. How I resolved them
 
 - I worked through the assignment checklist item by item and mapped each requirement to a file, adding whatever was missing rather than rewriting what was already correct.
-- I created the `update-about` branch with Git, pushed it, and opened the Pull Request from the branch to `main` on GitHub, recording its status in the Mission 06 README as required when a PR is not merged.
+- I created the `update-about` branch with Git, pushed it, opened the Pull Request from the branch to `main`, resolved the README conflict by keeping both sections, and merged it as `2d76846`. The local `main` was then updated with `git checkout main` and `git pull`, and I confirmed the "My Learning" section appears in the root README while the mission READMEs kept all eight required sections.
 - I re-read the privacy rule, removed the account name from every output, and used a public example domain for all network evidence.
 
 ## 7. Evidence / files
