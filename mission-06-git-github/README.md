@@ -52,13 +52,16 @@ Understand version control and the basic Git workflow: inspect the status, stage
 
 - Description written on the PR: the README change, and that the branch was created for Mission 06 tasks 6.2 and 6.3 so the change can be reviewed before reaching `main`.
 - Compared and reviewed the changed file: one addition, eleven lines, only `README.md` touched (the "My Learning" section and its heading), no other files affected.
-- **Merge status: the Pull Request is OPEN and has not been merged.** The assignment says to merge only if the instructor asks for it, so it is left open for review. Because of this, the "My Learning" section currently exists only on the `update-about` branch and will appear on `main` only after the PR is merged.
-- Once merged, the local `main` is updated with:
+- **Merge status: the Pull Request was MERGED into `main`.** Merge commit: **`2d76846`** — *Merge pull request #1 from anupamkislay07-hue/update-about*.
+- Before the merge, GitHub reported a conflict because the root README had gained a "Running the Number Converter" section on `main` while this branch added "My Learning" at the same place. I resolved it locally by merging `main` into `update-about` and keeping both sections (commit `e710e25`), then pushed and merged the PR, so nothing was overwritten.
+- After merging, the local `main` was updated and the change confirmed on the computer:
 
   ```bash
   git checkout main
   git pull
   ```
+
+  `git rev-parse HEAD origin/main` then showed the same commit, and the "My Learning" section was present in the root `README.md` on `main`.
 
 **What a branch is and why it is useful.** A branch is a separate line of development that shares the project's history but records its own new commits, so work in progress can exist without changing what is on `main`. If the change is wrong, `main` is untouched and the branch can simply be deleted.
 
@@ -100,7 +103,7 @@ A **local repository** lives inside my project folder on the computer: it is fas
 
 Git is the record; GitHub is where that record is hosted and reviewed. Every commit is a snapshot of the staged changes only, which is why `git add` matters: it decides what goes into the snapshot. Staging and committing are therefore two separate decisions — *what* to save, then *saving* it — and keeping them separate is what makes clean, per-mission commits possible instead of one large unexplained change.
 
-Branches let me work without touching `main`, and a Pull Request is the review step that turns a branch into a proposed change. The `update-about` work showed the whole cycle: branch, edit, stage, commit, push, compare, review. Leaving PR #1 open rather than merging immediately also made clear that a branch can sit published and reviewable while `main` stays stable.
+Branches let me work without touching `main`, and a Pull Request is the review step that turns a branch into a proposed change. The `update-about` work showed the whole cycle: branch, edit, stage, commit, push, compare, review and merge. PR #1 was merged into `main`; the open-PR screenshot currently in `evidence/` shows a different request with the branches reversed, so it is not evidence of that merge.
 
 ## 5. Difficulties faced
 
@@ -118,7 +121,8 @@ Branches let me work without touching `main`, and a Pull Request is the review s
 
 - Root `README.md` — the "My Learning" section added on the `update-about` branch (commit `6662b9f`).
 - Branch `update-about`, pushed to `origin`.
-- **PR #1**: <https://github.com/anupamkislay07-hue/digital-detective-8458/pull/1> — **open, not merged**.
+- **PR #1**: <https://github.com/anupamkislay07-hue/digital-detective-8458/pull/1> — **merged** into `main` as commit `2d76846`.
+- Root `README.md` on `main` after the merge contains both the "My Learning" section and the number-converter instructions.
 - Commit history visible on GitHub for every mission.
 
 ## 8. Commit details
